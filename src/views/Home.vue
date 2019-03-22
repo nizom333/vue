@@ -1,21 +1,23 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <Component />
-  </div>
+    <div class="main-charts">
+        <card></card>
+        <div class="row">
+            <line-chart></line-chart>
+            <material-chart></material-chart>
+        </div>
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld'
-import Component from '@/components/catalog/Component'
+import Card from '../components/Charts/Card'
+import LineChart from '../components/Charts/LineChart'
+import MaterialChart from '../components/Charts/MaterialChart'
 
 export default {
-  name: 'home',
   components: {
-    HelloWorld,
-    Component
+      Card,
+      LineChart,
+      MaterialChart,
   }
 }
 </script>

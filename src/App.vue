@@ -1,20 +1,42 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+
+      <div id="main-wrapper">
+
+          <header></header>
+
+          <side-bar-main></side-bar-main>
+
+          <div class="page-wrapper">
+
+              <breadcrumbs></breadcrumbs>
+
+              <div class="container-fluid">
+                  <router-view/>
+              </div>
+
+              <footer></footer>
+          </div>
+      </div>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<script>
+import Header from './components/Header'
+import SideBarMain from './components/Sidebar/Main'
+import Breadcrumbs from './components/Breadcrumbs'
+import Footer from './components/Footer'
+
+export default {
+    components: {
+        Header,
+        SideBarMain,
+        Breadcrumbs,
+        Footer,
+    }
 }
+</script>
+
+<style scoped>
+
 </style>
